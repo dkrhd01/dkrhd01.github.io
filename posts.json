@@ -1,0 +1,28 @@
+[
+  {
+    "file": "welcome.md",
+    "title": "GitHub Pages 블로그 구축 가이드",
+    "date": "2025-01-27",
+    "tags": [
+      "GitHub",
+      "Tutorial",
+      "Static Site"
+    ],
+    "category": "Tutorial",
+    "description": "정적 블로그를 처음부터 끝까지 구축하는 방법을 알아봅니다.",
+    "excerpt": "이 가이드에서는 GitHub Pages를 사용하여 정적 블로그를 구축하는 방법을 단계별로 설명합니다.\r \r \r \r 정적 블로그는 다음과 같은 장점이 있습니다:\r \r - ⚡ : 서버 사이드 처리 없이 정적 파일만 제공\r - 💰 : GitHub Pages는 완전 무료\r - 🔒 : 데이터베이스나 서버 취약점 없음\r - 📝 : 간단하고 효율적인 글쓰기\r -"
+  },
+  {
+    "file": "example.md",
+    "title": "블로그 시작하기",
+    "date": "2025-01-26",
+    "tags": [
+      "JavaScript",
+      "Web",
+      "GitHub Pages"
+    ],
+    "category": "Development",
+    "description": "GitHub Pages로 만든 정적 블로그에 오신 것을 환영합니다!",
+    "excerpt": "이것은 로 만든 정적 블로그의 첫 게시글입니다.\r \r \r \r \r \r 마크다운 문법을 사용하여 글을 작성할 수 있습니다:\r \r - \r - \r - `인라인 코드`\r - (https://github.com)\r \r \r \r Prism.js를 사용한 아름다운 코드 하이라이팅을 지원합니다:\r \r \r \r \r \r \r \r \r \r 오른쪽 상단의 버튼을 클릭하여 테마를 전환할"
+  }
+]
