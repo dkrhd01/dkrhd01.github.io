@@ -137,9 +137,12 @@ function showError(message) {
 }
 
 // Giscus 댓글 시스템 로드
-function loadGiscus() {
+function loadGiscus({ term, title } = {}) {
   const commentsSection = document.getElementById("comments");
   if (!commentsSection) return;
+
+  // 기존 Giscus 인스턴스 제거
+  commentsSection.innerHTML = "";
 
   const script = document.createElement("script");
   script.src = "https://giscus.app/client.js";
@@ -147,7 +150,7 @@ function loadGiscus() {
   script.setAttribute("data-repo-id", "R_kgDOQLHJjQ");
   script.setAttribute("data-category", "General");
   script.setAttribute("data-category-id", "DIC_kwDOQLHJjc4CxMbw");
-  script.setAttribute("data-mapping", "pathname");
+  script.setAttribute("data-mapping", "specific");
   script.setAttribute("data-strict", "0");
   script.setAttribute("data-reactions-enabled", "1");
   script.setAttribute("data-emit-metadata", "0");
@@ -156,6 +159,12 @@ function loadGiscus() {
     document.documentElement.getAttribute("data-theme") || "light";
   script.setAttribute("data-theme", currentTheme);
   script.setAttribute("data-lang", "ko");
+  if (term) {
+    script.setAttribute("data-term", term);
+  }
+  if (title) {
+    script.setAttribute("data-title", title);
+  }
   script.crossOrigin = "anonymous";
   script.async = true;
 
@@ -227,8 +236,8 @@ async function loadPost() {
     // 로딩 숨기기
     hideLoading();
 
-    // Giscus 댓글 로드
-    loadGiscus();
+    // Giscus 댓글 로드 (파일명을 고유 식별자로 사용)
+    loadGiscus({ term: filename, title: metadata.title });
   } catch (error) {
     console.error("게시글 로드 오류:", error);
     showError(error.message);
